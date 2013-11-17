@@ -13,7 +13,7 @@ import java.util.LinkedList;
  */
 public class Controlador {
  
- private LinkedList examenes = new LinkedList<>();
+ private LinkedList <examen> examenes = new LinkedList<>();
  private LinkedList <preguntas> preguntas = new LinkedList<>();
  private LinkedList <seccion> seccion = new LinkedList<>();
 
@@ -28,7 +28,4 @@ public class Controlador {
     public LinkedList getExamenes() {
         return examenes;
     }
- 
- 
- 
 }

@@ -13,8 +13,8 @@ import javax.swing.JInternalFrame;
  */
 public class seccion extends JInternalFrame{
 
-private String descripcion;
-LinkedList <preguntas> preguntas;
+    private String descripcion;
+    LinkedList <preguntas> preguntas;
 
     public seccion(String descripcion) {
         this.descripcion = descripcion;

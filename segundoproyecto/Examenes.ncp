@@ -1,0 +1,65 @@
+<Project>
+  <Name>Examenes</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Sin titulo</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Controlador</Name>
+        <Access>Public</Access>
+        <Location left="223" top="86" />
+        <Size width="190" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private LinkedList&lt;Examen&gt; examenes</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Examen</Name>
+        <Access>Public</Access>
+        <Location left="508" top="86" />
+        <Size width="185" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private LinkedList&lt;Seccion&gt; secciones</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Secciones</Name>
+        <Access>Public</Access>
+        <Location left="764" top="86" />
+        <Size width="201" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String descripcion</Member>
+        <Member type="Field">private LinkedList&lt;Pregunta&gt; Preguntas</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Pregunta</Name>
+        <Access>Public</Access>
+        <Location left="214" top="350" />
+        <Size width="199" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String pregunta</Member>
+        <Member type="Field">private String respuestaCorrecta</Member>
+        <Member type="Field">private LinkedList&lt;String&gt; opciones</Member>
+        <Member type="Field">private int numeroPregunta</Member>
+        <Member type="Field">private String respuestaSeleccionada</Member>
+        <Member type="Field">private double porcentajeAcierto</Member>
+        <Member type="Field">private int valorPuntos</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>Pregunta</Name>
+        <Access>Public</Access>
+        <Location left="679" top="360" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void InsertarInfo()</Member>
+        <Member type="Method">void eliminarInfo()</Member>
+        <Member type="Method">void evaluarPregunta()</Member>
+        <Member type="Method">void desplegarPregunta()</Member>
+        <Member type="Method">double getScore()</Member>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+</Project>
