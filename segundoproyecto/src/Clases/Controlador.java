@@ -25,7 +25,34 @@ public class Controlador {
         return seccion;
     }
 
-    public LinkedList getExamenes() {
+    public LinkedList <examen> getExamenes() {
         return examenes;
+    }
+    
+    
+    /**
+     * Inserta examen en la lista de examenes
+     * @param e examen a insertar 
+     */
+    
+    public void insertar(examen e){
+     examenes.add(e);
+    }
+    
+    /**
+     * Inserta seccion en la lista de secciones
+     * @param s 
+     */
+    public void insertar(seccion s){
+     seccion.add(s);
+    }
+    
+     public String buscarexamen(String e){
+        for (int i = 0, l = examenes.size(); i < l; i++){
+            if (examenes.get(i).getNombre().equals(e)){
+                return e;
+            }
+        }
+        return "No existe";
     }
 }
