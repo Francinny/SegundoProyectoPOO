@@ -6,6 +6,7 @@ package GUI;
 
 import Clases.*;
 import java.util.LinkedList;
+import sun.misc.JavaxSecurityAuthKerberosAccess;
 
 /**
  *
@@ -32,6 +33,9 @@ public class Sistema extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        msjssecciones = new javax.swing.JDialog();
+        jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -63,6 +67,41 @@ public class Sistema extends javax.swing.JFrame {
         taDescripcion1 = new javax.swing.JTextArea();
         jTabbedPane2 = new javax.swing.JTabbedPane();
 
+        msjssecciones.setMinimumSize(new java.awt.Dimension(282, 177));
+
+        jLabel8.setText("Esta sección ya existe!!");
+
+        jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout msjsseccionesLayout = new javax.swing.GroupLayout(msjssecciones.getContentPane());
+        msjssecciones.getContentPane().setLayout(msjsseccionesLayout);
+        msjsseccionesLayout.setHorizontalGroup(
+            msjsseccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(msjsseccionesLayout.createSequentialGroup()
+                .addGroup(msjsseccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(msjsseccionesLayout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(jLabel8))
+                    .addGroup(msjsseccionesLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(jButton1)))
+                .addContainerGap(79, Short.MAX_VALUE))
+        );
+        msjsseccionesLayout.setVerticalGroup(
+            msjsseccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(msjsseccionesLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel8)
+                .addGap(30, 30, 30)
+                .addComponent(jButton1)
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
@@ -84,6 +123,12 @@ public class Sistema extends javax.swing.JFrame {
 
         jLabel7.setText("Examenes");
 
+        cExamenes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cExamenesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -91,18 +136,22 @@ public class Sistema extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bCrearE)
-                        .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cExamenes, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(55, 55, 55)
-                                .addComponent(jLabel7)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bCrearE)
+                                .addGap(73, 73, 73)
+                                .addComponent(jLabel7)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cExamenes, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(83, 83, 83))))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,10 +160,11 @@ public class Sistema extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bCrearE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(bCrearE)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cExamenes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -373,6 +423,13 @@ public class Sistema extends javax.swing.JFrame {
     }//GEN-LAST:event_bCrearEActionPerformed
 
     private void bCrearE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCrearE1ActionPerformed
+      for (int i = 0, l = instancia.getSeccion().size(); i < l; i++){
+            if (instancia.getSeccion().get(i).getDescripcion().equals(taDescripcion1.getText())){
+             //  instancia.getExamenes().get(i).setSecciones(secci);
+            msjssecciones.setVisible(true);
+            return;
+            }
+      }
         seccion s= new seccion(taDescripcion1.getText()); 
         instancia.insertar(s);
         lSecciones.clear();
@@ -397,7 +454,7 @@ public class Sistema extends javax.swing.JFrame {
                instancia.getExamenes().get(i).setSecciones(secci); 
             }
         }
-        
+        cSecciones.removeAllItems();
         jPanel5.setVisible(true);
     
         
@@ -417,6 +474,30 @@ public class Sistema extends javax.swing.JFrame {
         cSecciones.addItem(lSecciones.getSelectedItem());
 
     }//GEN-LAST:event_lSeccionesActionPerformed
+
+    private void cExamenesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cExamenesActionPerformed
+      cSecciones.removeAllItems();
+
+        try{
+        
+            for (int i = 0; i < instancia.getExamenes().size(); i++){
+            if (instancia.getExamenes().get(i).getNombre().equals(cExamenes.getSelectedItem().toString())){
+                for(int x=0; x < instancia.getExamenes().get(i).getSecciones().size(); x++){
+                       cSecciones.addItem(instancia.getExamenes().get(i).getSecciones().get(x));
+                }
+           
+            }
+           
+       }
+
+        }catch(Exception e){
+        e.getMessage();
+        }       
+    }//GEN-LAST:event_cExamenesActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       msjssecciones.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -460,6 +541,7 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JComboBox cExamenes;
     private javax.swing.JComboBox cPreguntas;
     private javax.swing.JComboBox cSecciones;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -467,6 +549,7 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -481,6 +564,7 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JList lPreguntas;
     private java.awt.List lSecciones;
+    private javax.swing.JDialog msjssecciones;
     private javax.swing.JTextArea taDescripcion;
     private javax.swing.JTextArea taDescripcion1;
     // End of variables declaration//GEN-END:variables

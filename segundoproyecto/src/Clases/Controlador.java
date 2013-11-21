@@ -47,12 +47,5 @@ public class Controlador {
      seccion.add(s);
     }
     
-     public String buscarexamen(String e){
-        for (int i = 0, l = examenes.size(); i < l; i++){
-            if (examenes.get(i).getNombre().equals(e)){
-                return e;
-            }
-        }
-        return "No existe";
-    }
+   
 }
