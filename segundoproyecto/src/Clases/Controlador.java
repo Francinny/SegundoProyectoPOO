@@ -6,6 +6,9 @@ package Clases;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import javax.swing.JFileChooser;
+import javax.swing.JInternalFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -48,4 +51,41 @@ public class Controlador {
     }
     
    
+    
+     public void cargaDinamica() {
+        try {
+
+            if (GUI.Sistema.jFileChooser1.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+
+                String nameFile = GUI.Sistema.jFileChooser1.getSelectedFile().getName().toString();
+                String a = "";
+                for (int i = 0; i < nameFile.length(); i++) {
+                    if (String.valueOf(nameFile.charAt(i)).compareTo(".") == 0) {
+                        a = nameFile.substring(0, i);
+                    }
+                }
+
+                FileClassLoader loaderFile = new FileClassLoader(GUI.Sistema.jFileChooser1.getSelectedFile().getParent());
+                Class c = loaderFile.loadClass(a);
+
+                try {
+                   
+                    JInternalFrame j = new JInternalFrame() ;
+                    j = (JInternalFrame)c.newInstance();
+                    GUI.Sistema.jDesktopPane1.add(j);
+                    ((Pregunta)j).insertarInfo();
+                 
+
+                } catch (InstantiationException ex) {
+                } catch (IllegalAccessException ex) {
+                } catch (Exception ex) {
+                 
+
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+           
+
+        }
+    }
 }
